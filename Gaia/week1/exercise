@@ -1,0 +1,50 @@
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+            font-family: serif;
+        }
+        th, td {
+            border: 1px solid rgb(233, 66, 66);
+            padding: 8px;
+            text-align: center;
+        }
+        caption {
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption>Comparison of models</caption>
+        <tr>
+            <th>Model</th>
+            <th>OS</th>
+            <th>Display</th>
+            <th>RAM</th>
+        </tr>
+        <tr>
+            <td>Samsung Galaxy S7</td>
+            <td rowspan="2">Android</td>
+            <td>5.1"</td>
+            <td>4 GB</td>
+        </tr>
+        <tr>
+            <td>Sony Xperia Z5</td>
+            <td>4.6"</td>
+            <td rowspan="2">2 GB</td>
+        </tr>
+        <tr>
+            <td>Apple iPhone 6s</td>
+            <td>iOS</td>
+            <td>4.7"</td>
+        </tr>
+    </table>
+
+</body>
+</html>

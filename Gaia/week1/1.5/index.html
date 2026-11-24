@@ -1,0 +1,104 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My World</title>
+    <script>
+      // intro
+      // CONSOLE
+
+      console.log("Yellow World!");
+
+      console.log("Hello World!");
+
+      let width, length, area;
+      width = 10;
+      length = 20;
+      area = width * length;
+      console.log(area);
+
+      let myNum = 10;
+      let myStr = "Hello World!";
+      let flag = true;
+      console.log(typeof myNum);
+      console.log(typeof myStr);
+      console.log(typeof flag);
+
+      const PI = 3.141592653589793;
+      let radius = 10;
+      let areaCircle = PI * radius ** 2;
+      console.log(areaCircle);
+    </script>
+
+    <script>
+      const person = {
+        name: "Alice",
+        age: 30,
+        city: "New York",
+        address: {
+          street: "123 Main St",
+          city: "New York",
+          state: "NY",
+          zip: "10001",
+        },
+      };
+      person.age = 31;
+      person.city = "Paris";
+      person["country"] = "USA";
+      person["age"] = 35;
+      person.address.zip = "10002";
+      console.log(person); // {name: "Alice", age: 35, city: "Paris", country: "USA"}
+
+      let numArr = [3, 6, 7, 9, 10];
+      let fruitArr = ["apple", "banana", "orange"];
+
+      console.log(numArr.length);
+      console.log(fruitArr.length);
+
+      console.log(numArr);
+      console.log(numArr[3]);
+
+      fruitArr[1] = "Durian";
+      console.log(fruitArr[1]);
+
+      let student = {
+        firstName: "Susan",
+        lastName: "Lee",
+        age: 20,
+      };
+      console.log(student.firstName);
+      console.log(student["lastName"]);
+
+      student.age = 20;
+      console.log(student.age);
+
+      let number1 = 3;
+      let number2 = "3";
+      console.log(number1 === number2); // false
+      console.log(number1 == number2); // true
+
+      let num1 = 0.3;
+      let num2 = 0.1 + 0.2;
+      console.log(num1 == num2); // false
+
+let teamMembers = [
+    { firstName: "Alice" },
+    { firstName: "Bob" },
+    { firstName: "Charlie" },
+    { firstName: "David" },
+    { firstName: "Eve" }
+];
+let lastNames = ["Smith", "Johnson", "Williams", "Jones", "Brown"];
+let hobbies = ["reading", "traveling", "cooking", "sports", "music"];
+let favoriteFood= ["pizza", "sushi", "pasta", "tacos", "ice cream"];
+let pets = ["dog", "cat", "fish", "hamster", "parrot"];
+
+for (let i = 0; i < teamMembers.length; i++) {
+    console.log(teamMembers[i].firstName + " " + lastNames[i] + " likes " + hobbies[i] + " and loves " + favoriteFood[i] + ". They have a " + pets[i] + ".");
+}
+    </script>
+  </head>
+  <body>
+    <h1>My First World</h1>
+  </body>
+</html>

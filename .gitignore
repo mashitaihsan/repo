@@ -1,0 +1,31 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+pyvenv.cfg
+
+# Fullstack virtual environment
+/Gaia/Github/fullstack/Lib/
+/Gaia/Github/fullstack/Scripts/
+/Gaia/Github/fullstack/Include/
+
+# Node.js
+node_modules/
+dist/
+build/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.key
+
+# IDE
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db

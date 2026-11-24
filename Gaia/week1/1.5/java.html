@@ -1,0 +1,210 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyJava</title>
+
+    <script>
+      // =========================
+      // 1. IF / ELSE IF / ELSE
+      // =========================
+
+      let number1, number2;
+
+      number1 = Number(prompt("Enter a number:"));
+      number2 = Number(prompt("Enter a second number:"));
+
+      if (number1 > number2) {
+        console.log(`${number1} is bigger than ${number2}`);
+      } else if (number1 === number2) {
+        console.log(`${number2} is equal to ${number1}`);
+      } else {
+        console.log(`${number2} is bigger than ${number1}`);
+      }
+
+
+      // =========================
+      // 2. SWITCH - DAY
+      // =========================
+
+      let day = Number(prompt("Enter a number between 1 and 7:"));
+
+      switch (day) {
+        case 1:
+          console.log("Monday");
+          break;
+
+        case 2:
+          console.log("Tuesday");
+          break;
+
+        case 3:
+          console.log("Wednesday");
+          break;
+
+        case 4:
+          console.log("Thursday");
+          break;
+
+        case 5:
+          console.log("Friday");
+          break;
+
+        case 6:
+          console.log("Saturday");
+          break;
+
+        case 7:
+          console.log("Sunday");
+          break;
+
+        default:
+          console.log("Invalid input. Please enter a number between 1 and 7.");
+      }
+
+
+      // =========================
+      // 3. SWITCH - GRADE
+      // =========================
+
+      let grade = String(prompt("Enter your grade:")).toUpperCase();
+
+      switch (grade) {
+        case "A":
+          console.log("Excellent");
+          break;
+
+        case "B":
+          console.log("Good Job!");
+          break;
+
+        case "C":
+          console.log("You Passed!");
+          break;
+
+        case "D":
+          console.log("Below Average");
+          break;
+
+        case "F":
+          console.log("Failing");
+          break;
+
+        default:
+          console.log("Keep trying.");
+          break;
+      }
+
+
+      // =========================
+      // 4. FOR LOOP + ARRAY
+      // =========================
+
+      let myArray = [4, 5, 6, 10, 12];
+      let total = 0;
+
+      for (let i = 0; i < myArray.length; i++) {
+        total += myArray[i];
+      }
+
+      console.log(total);
+
+
+      // =========================
+      // 5. WHILE LOOP + RANDOM
+      // =========================
+
+      let number = 0;
+      let randomTotal = 0;
+
+      while (number < 8) {
+        number = Math.floor(Math.random() * 10 + 1);
+
+        console.log(number);
+
+        randomTotal += number;
+      }
+
+      console.log("The sum of random numbers is " + randomTotal);
+
+
+      // =========================
+      // 6. FUNCTION
+      // =========================
+
+      function printName(myName) {
+        console.log("My name is " + myName);
+      }
+
+      printName("Mashita");
+
+
+      // =========================
+      // 7. FUNCTION WITH RETURN
+      // =========================
+
+      function addition(num1, num2) {
+        let result = num1 + num2;
+        return result;
+      }
+
+      let additionResult = addition(5, 9);
+
+      console.log("The addition result is " + additionResult);
+
+
+      // =========================
+      // 8. FUNCTION WITH TEMPLATE LITERAL
+      // =========================
+
+      function say(name, age) {
+        return `My name is ${name}. This year I am turning ${age}.`;
+      }
+
+      console.log(say("GAIA", 1));
+
+
+      // =========================
+      // 9. ARROW FUNCTION
+      // =========================
+
+      let greet = () => "Good Morning";
+
+      let message = greet();
+
+      console.log(message);
+
+
+      // =========================
+      // 10. ARROW FUNCTION WITH PARAMETERS
+      // =========================
+
+      let additionArrow = (num1, num2) => num1 + num2;
+
+      let calcResult = additionArrow(5, 6);
+
+      console.log(calcResult);
+
+
+      // =========================
+      // 11. TERNARY + ARROW FUNCTION
+      // =========================
+
+      let num = 12;
+
+      let checkEven =
+        (num % 2 === 0)
+          ? () => console.log("Even")
+          : () => console.log("Odd");
+
+      checkEven();
+
+    </script>
+  </head>
+
+  <body>
+    <h1>My Java</h1>
+  </body>
+</html>
+

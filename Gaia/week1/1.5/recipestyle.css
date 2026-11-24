@@ -1,0 +1,425 @@
+
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+body {
+    min-height: 100vh;
+    font-family: "Poppins", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, #fff3d6, transparent 35%),
+        radial-gradient(circle at bottom right, #f3c892, transparent 30%),
+        #f8efe3;
+
+    padding: 60px 20px;
+    color: #3b2920;
+}
+
+
+/* ================================
+   RECIPE CARD
+================================ */
+
+.recipe-card {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+
+    background: #fffaf4;
+
+    border-radius: 30px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 25px 60px rgba(70, 40, 20, 0.18),
+        0 5px 15px rgba(70, 40, 20, 0.08);
+
+    position: relative;
+    overflow: hidden;
+
+    animation: appear 0.8s ease;
+}
+
+
+/* Decorative circle */
+
+.recipe-card::before {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    background: #f6d6a8;
+
+    border-radius: 50%;
+
+    top: -90px;
+    right: -70px;
+
+    opacity: 0.5;
+}
+
+
+/* ================================
+   IMAGE
+================================ */
+
+.recipe-image {
+    width: 100%;
+    height: 420px;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+.recipe-image::after {
+    content: "🍗 HOMEMADE FAVORITE";
+
+    position: absolute;
+
+    left: 20px;
+    bottom: 20px;
+
+    background: rgba(45, 28, 18, 0.85);
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.recipe-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+
+/* Image zoom */
+
+.recipe-image:hover img {
+    transform: scale(1.08);
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+.recipe-card h2 {
+    font-size: 48px;
+
+    text-align: center;
+
+    margin-top: 30px;
+    margin-bottom: 12px;
+
+    color: #6f3518;
+
+    letter-spacing: -1px;
+}
+
+
+/* Small line underneath title */
+
+.recipe-card h2::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 4px;
+
+    margin: 12px auto;
+
+    background: #d9822b;
+
+    border-radius: 10px;
+}
+
+
+/* ================================
+   DESCRIPTION
+================================ */
+
+.recipe-card > p {
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+
+    text-align: center;
+
+    color: #765f52;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+/* ================================
+   SECTION HEADINGS
+================================ */
+
+.recipe-card h3 {
+    font-size: 24px;
+
+    color: #6f3518;
+
+    margin-top: 35px;
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.recipe-card h3::before {
+    content: "";
+
+    width: 7px;
+    height: 28px;
+
+    background: #d9822b;
+
+    border-radius: 10px;
+}
+
+
+/* ================================
+   INGREDIENTS BOX
+================================ */
+
+.recipe-card ul {
+    list-style: none;
+
+    background: #fdf0df;
+
+    border-radius: 18px;
+
+    padding: 20px 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+
+.recipe-card ul li {
+    padding: 12px 15px;
+
+    background: #fffaf4;
+
+    border-radius: 10px;
+
+    color: #5d4639;
+
+    transition: all 0.25s ease;
+
+    border: 1px solid #f1dfca;
+}
+
+
+.recipe-card ul li::before {
+    content: "✓";
+
+    color: #d9822b;
+
+    font-weight: bold;
+
+    margin-right: 8px;
+}
+
+
+.recipe-card ul li:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 18px rgba(100, 55, 20, 0.12);
+
+    border-color: #d9822b;
+}
+
+
+/* ================================
+   INSTRUCTIONS
+================================ */
+
+.recipe-card ol {
+    list-style: none;
+
+    counter-reset: recipe-step;
+
+    padding: 5px 0;
+}
+
+
+.recipe-card ol li {
+    counter-increment: recipe-step;
+
+    position: relative;
+
+    padding: 18px 20px 18px 70px;
+
+    margin-bottom: 12px;
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    line-height: 1.7;
+
+    color: #5d4639;
+
+    border: 1px solid #f0e2d3;
+
+    transition: all 0.25s ease;
+}
+
+
+/* Number circle */
+
+.recipe-card ol li::before {
+    content: counter(recipe-step);
+
+    position: absolute;
+
+    left: 20px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 35px;
+    height: 35px;
+
+    background: #d9822b;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+.recipe-card ol li:hover {
+    transform: translateX(6px);
+
+    box-shadow: 0 8px 20px rgba(80, 40, 15, 0.1);
+}
+
+
+/* ================================
+   ANIMATION
+================================ */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 30px 15px;
+    }
+
+    .recipe-card {
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    .recipe-image {
+        height: 320px;
+    }
+
+    .recipe-card h2 {
+        font-size: 38px;
+    }
+
+    .recipe-card ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================================
+   PHONE
+================================ */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+    .recipe-card {
+        padding: 15px;
+    }
+
+    .recipe-image {
+        height: 250px;
+    }
+
+    .recipe-card h2 {
+        font-size: 30px;
+    }
+
+    .recipe-card > p {
+        font-size: 14px;
+    }
+
+    .recipe-card h3 {
+        font-size: 21px;
+    }
+
+    .recipe-card ol li {
+        padding-left: 60px;
+    }
+}
+

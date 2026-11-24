@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <!-- Importing a nice font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Global Styles */
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      /* Profile Card Styling */
+      .card {
+        background: #ffffff;
+        width: 320px;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Image Styling */
+      .card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #667eea;
+        margin-bottom: 15px;
+      }
+
+      /* Typography */
+      .card h1 {
+        font-size: 22px;
+        color: #333333;
+        margin: 10px 0 5px 0;
+      }
+
+      .card > p {
+        color: #777777;
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+
+      /* Divider */
+      hr {
+        border: none;
+        height: 1px;
+        background: #eeeeee;
+        margin: 20px 0;
+      }
+
+      /* Tags Container */
+      .tags-container {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+      }
+
+      /* Individual Tags */
+      .tag {
+        background: #eef2f7;
+        color: #667eea;
+        padding: 6px 12px;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 20px;
+        transition: background 0.2s, color 0.2s;
+      }
+
+      .tag:hover {
+        background: #667eea;
+        color: #ffffff;
+      }
+
+      /* Footer text */
+      .learning-status {
+        font-size: 13px;
+        color: #555555;
+        font-weight: 500;
+        background: #fdfbfb;
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px dashed #cbd5e1;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="card">
+      <img
+        src="https://images.pexels.com/photos/31458650/pexels-photo-31458650.jpeg"
+        alt="Profile Picture"
+      />
+
+      <h1>Hi, I am Mashita!</h1>
+      <p>I love eating Ayam Gepuk 🍗</p>
+
+      <hr />
+
+      <div class="tags-container">
+        <span class="tag">Frontend</span>
+        <span class="tag">Backend</span>
+        <span class="tag">AI</span>
+      </div>
+
+      <p class="learning-status">🚀 I am currently learning Frontend!</p>
+    </div>
+
+  </body>
+</html>

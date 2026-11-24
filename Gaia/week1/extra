@@ -1,0 +1,182 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan HTML & CSS Cantik</title>
+    
+    <style>
+        /* 1. KAWALAN ASAS (BODY & FONT) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #a06691; /* Warna latar belakang kelabu lembut */
+            color: #d456a4;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        /* 2. KOTAK UTAMA (CONTAINER) */
+        .container {
+            max-width: 800px;
+            margin: 0 auto; /* Letak di tengah-tengah skrin */
+            background-color: #e4dce1; /* Kotak warna putih */
+            padding: 30px 40px;
+            border-radius: 12px; /* Bucu kotak melengkung */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Efek bayang-bayang 3D */
+        }
+
+        /* 3. TAJUK (HEADINGS) */
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 3px solid #3498db; /* Garis biru di bawah tajuk */
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+
+        /* 4. JADUAL MODEN (MODERN TABLE) */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 8px 8px 0 0;
+            overflow: hidden; /* Pastikan bucu melengkung pada header */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+        thead tr {
+            background-color: #009879; /* Hijau korporat */
+            color: #ffffff;
+            text-align: left;
+        }
+        th, td {
+            padding: 15px 20px;
+            border: 1px solid #eeeeee;
+        }
+        /* Efek belang-belang (Zebra stripe) untuk baris jadual */
+        tbody tr:nth-of-type(even) {
+            background-color: #f9f9f9;
+        }
+        /* Efek apabila tetikus (mouse) lalu atas baris */
+        tbody tr:hover {
+            background-color: #f1f1f1;
+            transition: 0.5s; /* Efek pertukaran warna yang smooth */
+        }
+
+        /* 5. GAYA DETAILS & SUMMARY (ACCORDION) */
+        details {
+            background-color: #e8f4f8; /* Biru cair */
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 5px solid #3498db;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #2980b9;
+        }
+
+        /* 6. GAYA BORANG (FORM & BUTTON) */
+        input[type="text"], input[type="color"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 20px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box; /* Pastikan padding tak kacau saiz */
+            font-size: 16px;
+        }
+        input[type="text"]:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s; /* Efek butang smooth */
+        }
+        button:hover {
+            background-color: #2980b9; /* Warna gelap sikit bila mouse over */
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!-- Semua kandungan dimasukkan ke dalam 'container' supaya ia duduk di tengah -->
+    <div class="container">
+        
+        <h1>Latihan Tahap 2: CSS Premium 🎨</h1>
+        <p style="text-align: center; color: #7f8c8d;">Lihat bagaimana CSS menukar HTML biasa menjadi sangat menarik.</p>
+
+        <h2>1. Jadual Yang Kompleks (Complicated Table)</h2>
+        <p>Jadual ini kini mempunyai efek "hover", bucu melengkung, dan warna belang (zebra stripes).</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2" style="border-right: 1px solid #11b897; text-align: center;">Hari</th>
+                    <th colspan="3" style="text-align: center;">Sesi Pembelajaran</th>
+                </tr>
+                <tr>
+                    <th style="border-top: 1px solid #11b897;">Pagi</th>
+                    <th style="border-top: 1px solid #11b897;">Tengah Hari</th>
+                    <th style="border-top: 1px solid #11b897;">Petang</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td><strong>Isnin</strong></td>
+                    <td>HTML & CSS</td>
+                    <td rowspan="2" style="background-color: #fff3cd; color: #856404; text-align: center; font-weight: bold;">REHAT</td>
+                    <td>JavaScript</td>
+                </tr>
+                <tr>
+                    <td><strong>Selasa</strong></td>
+                    <td>Database</td>
+                    <td>Python</td>
+                </tr>
+                <tr>
+                    <td><strong>Rabu</strong></td>
+                    <td colspan="3" style="text-align:center; background-color: #d4edda; color: #155724; font-weight: bold;">Kerja Kursus Sepenuh Hari</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>2. Benda-Benda Baru (Interaktif)</h2>
+
+        <h3>a) Tag Details & Summary</h3>
+        <details>
+            <summary>👉 Klik di sini untuk buka rahsia</summary>
+            <p>Gempak kan? CSS menjadikan kotak ini nampak kemas dengan garisan biru di tepi dan bucu yang membulat (border-radius).</p>
+        </details>
+
+        <h3>b) Tag Highlight</h3>
+        <p>Kalau anda nak <mark style="background-color: #ffeb3b; padding: 2px 5px; border-radius: 4px;">highlight ayat penting</mark> macam marker pen kuning, ia nampak lebih cantik jika ditambah sedikit *padding*.</p>
+
+        <h3>c) Borang (Form) Ringkas</h3>
+        <form>
+            <label for="nama">Nama Anda:</label>
+            <input type="text" id="nama" placeholder="Taip nama anda di sini...">
+
+            <label for="warna">Warna Kegemaran (Cuba klik):</label>
+            <input type="color" id="warna">
+
+            <button type="button">Hantar Borang</button>
+        </form>
+
+    </div> <!-- Penutup container -->
+
+</body>
+</html>
